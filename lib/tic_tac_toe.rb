@@ -87,6 +87,7 @@ class TicTacToe
     won? || full? || draw?
   end
   
+<<<<<<< HEAD
   def winner 
     WIN_COMBINATIONS.detect do |combo| 
           if @board[combo[0]] == "X" && @board[combo[1]] == "X" && @board[combo[2]] == "X" 
@@ -116,3 +117,23 @@ end
 
 
 
+=======
+  def winner
+    WIN_COMBINATIONS.any? do |win_combo|
+       if draw? 
+         nil
+         elsif position_taken?(win_combo[0]) && @board[win_combo[0]] == @board[win_combo[1]] && @board[win_combo[1]] == @board[win_combo[2]] = "X"
+           return "X"
+         else position_taken?(win_combo[0]) && @board[win_combo[0]] == @board[win_combo[1]] && @board[win_combo[1]] == @board[win_combo[2]] = "O"
+           return "O"
+       end 
+     end
+   end
+   
+  
+
+
+
+   
+end
+>>>>>>> 136d1ea3d30078e4453136f716ed7b324f14fd2b
